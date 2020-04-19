@@ -37,7 +37,9 @@ Class that is used to define a segments of the target area's map. All FloatingIc
 
 - SegmentScale: Float - Stores the all axes scale multiplier of the segment's mesh. The default value is (1.0, 1.0, 1.0).
 
-- SegmentMapMaterial: Material - A supplementary material that is used to show the target's floor plan. This is only need to simplify the vertex and room arrangement on the segment. The metarial is obly shown in the editor and is hidden in the game. The default value is null.
+- SegmentMapMaterial: Material - A supplementary material that is used to show the target's floor plan. This is only need to simplify the vertex and room arrangement on the segment. The metarial is only shown in the editor and is hidden in the game. The default value is null.
+
+- SegmentMapScale: Float - Stores a X,Y scale of the SegmentMapMaterial. Use this to adjust the floor plan to match its real world scale. The default value is 200.0.
 
 
 # DEBUG MODE
