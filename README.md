@@ -9,13 +9,17 @@ The AR Navigation
 </p>
 
 
-# SYSTEM CLASSES
+# CLASSES
 
 ## The system contains and is built on the following classes: 
 
 ### ARWorldBase
 
-Supplementary class that is used as a root to all MapSegment classes and also stores references to them. Every new MapSegment must be attached to the ARWorldBase class and a reference to every MapSegment instance must be added to the MapSegments array. Public properties: 
+Supplementary class that is used as a root to all MapSegment classes and also stores references to them. Every new MapSegment must be attached to the ARWorldBase class and a reference to every MapSegment instance must be added to the MapSegments array. 
+
+Usage: Place in anywhere on the map. 
+
+Public properties: 
 
 - WorldTrueNorthAngel: Float - Stores the rotation shift of the target area relatinve to the true polar pole. You can get the rotation shift of yout target area using Google Maps and calculating angle of rotation relative to latitude(any vertical line). The ARWorldBase class will rotate to the given angle with a short delay when the applications starts. The delay is needed to allow attached MapSegments and it's Room's to calculate their size and position using the provided model of the target area (Static Mesh). The default value is zero.
 
@@ -23,7 +27,11 @@ Supplementary class that is used as a root to all MapSegment classes and also st
 
 ### MapSegment
 
-Class that is used to define a segments of the target area's map. All FloatingIcon, Room or Vertex classes that are located in thos segment should be attached to it. Public properties: 
+Class that is used to define a segments of the target area's map. All FloatingIcon, Room or Vertex classes that are located in thos segment should be attached to it.
+
+Usage: Place in anywhere on the map and attach it to the ARWorldBase. 
+
+Public properties: 
 
 - Floor: Integer - Stores a floor number of the segment. The default value is zero.
 
@@ -43,7 +51,11 @@ Class that is used to define a segments of the target area's map. All FloatingIc
 
 ### FloatingIcon
 
-Class that represents a floating in the air icon which can be used to highligh points of interests. Public properties: 
+Class that represents a floating in the air icon which can be used to highligh points of interests.
+
+Usage: Place in anywhere on the map segment and attach it to this segment. 
+
+Public properties: 
 
 - IconMaterial: Material - A material that contains the image for the floating icon. Can include a static picture (like in the demo) or anything else. The default value if null.
 
@@ -51,7 +63,11 @@ Class that represents a floating in the air icon which can be used to highligh p
 
 ### Room
 
-Class that represents a single room in the target area. 
+Class that represents a single room in the target area. It can be literally a room or just a small sub-area. 
+
+Usage: Place in anywhere on the map segment and attach it to this segment. 
+
+Public properties: 
 
 
 # DEBUG MODE
