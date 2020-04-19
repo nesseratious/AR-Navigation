@@ -16,7 +16,15 @@ The AR Navigation
 ### ARWorldBase
 Supplementary class that is used as a root to all MapSegment classes and also stores references to them. Every new MapSegment must be attached to the ARWorldBase class and a reference to every MapSegment instance must be added to the MapSegments array. Public properties: 
 - WorldTrueNorthAngel: Float - Stores the rotation shift of the target area relatinve to the true polar pole. You can get the rotation shift of yout target area using Google Maps and calculating angle of rotation relative to latitude(any vertical line). The ARWorldBase class will rotate to the given angle with a short delay when the applications starts. The delay is needed to allow attached MapSegments and it's Room's to calculate their size and position using the provided model of the target area (Static Mesh).
-- MapSements: Array<MapSegment> - Supplementary array that contains references to it's segments in case you need it.
+- MapSements: Array of MapSegment - Supplementary array that contains references to it's segments in case you need it.
+
+### MapSegment
+Class that is used to define a segments of the target area's map. All FloatingIcon, Room or Vertex classes that are located in thos segment should be attached to it. Public properties: 
+- Floor: Integer - Stores a floor number of the segment.
+- FloorDisplayedText: Text - Stores a localizable text that describes the segment's floor. Keep in mind that segments can be used not only to differentiate floors, but also to divide a complex map into more small pieces in case the target area is big enoght. 
+- SegmentMesh: StaticMesh - Fundamental mesh that defines the area of the segment. It is used in the minimap (white colour material) and in the segment itsef (transparent material) in case you will want to do a turn-based navigation(described in the NAVIGATION section). 
+- SegmentOffset: Vector2D - Stores an X,Y offset of the segment's mesh relative to the segments's origin. 
+- SegmentHeight: Float - Stores the height of the segment's mesh in metres. For this to work, the segment's mesh should be 1 metre in height. Alternatively you can create a mesh with aby height and set SegmentHeight to 1.0.   
 
 
 # DEBUG MODE
