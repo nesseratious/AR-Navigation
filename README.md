@@ -41,6 +41,18 @@ Class that is used to define a segments of the target area's map. All FloatingIc
 
 - SegmentMapScale: Float - Stores a X,Y scale of the SegmentMapMaterial. Use this to adjust the floor plan to match its real world scale. The default value is 200.0.
 
+### FloatingIcon
+
+Class that represents a floating in the air icon which can be used to highligh points of interests. Public properties: 
+
+- IconMaterial: Material - A material that contains the image for the floating icon. Can include a static picture (like in the demo) or anything else. The default value if null.
+
+- Text: Text - A localizable text that describes this point of interest. Will be displayed on both sides of the floating icon.
+
+### Room
+
+Class that represents a single room in the target area. 
+
 
 # DEBUG MODE
 
