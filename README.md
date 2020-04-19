@@ -69,6 +69,33 @@ Usage: Place in anywhere on the map segment and attach it to this segment.
 
 Public properties: 
 
+### Vetrex
+
+Class that represents a single room in the target area. It can be literally a room or just a small sub-area. 
+
+Usage: Place in anywhere on the map segment and attach it to this segment. 
+
+Public properties: 
+
+### Configuration
+
+Class that represents a single room in the target area. It can be literally a room or just a small sub-area. 
+
+Usage: Place in anywhere on the map segment and attach it to this segment. 
+
+Public properties: 
+
+### 2DImageProvider
+
+Class that represents a single room in the target area. It can be literally a room or just a small sub-area. 
+
+Usage: Place in anywhere on the map segment and attach it to this segment. 
+
+Public properties: 
+
+### ARGameMode, ARPawn and ARPlayerController
+
+Cla
 
 # DEBUG MODE
 
