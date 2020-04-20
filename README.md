@@ -9,18 +9,33 @@
 
 
 #### The system is shipped with the following features:
-- 
-
+- Automatic calculation of the optimal route.
+- Dynamic minimap that shows user's current location.
+- Intuitive UI that shows user's destination and has a list of quick buttons for predefined destinations.
+- Floating Icons to hightlight possible points of interest.
+- Ability to spawn custom markers that will snap to a detected surface.
+- QRCode detection.
 
 #### How it works?
-
+1. You place an ARWorldBase instance anywhere on the map, it will serve as target area's origin. 
+2. You place one or multiple instances of MapSegment, they will serve as containers that represent each segments properties. Multiple segments are used to divide the map by floors or by some small sub-areas. 
+3. For each MapSegment you assign it's floor map (used only for debuging purposses and will be hidden in the app) and a static mesh that represents segment's map in the real world. You can adjust the scale of the segment to match it's real world scale.
+4.
+5.
+6.
+7.
+8.
+9.
 
 #### What problem does it solve?
 
+#### Requirements:
+- The device must support ARKit for iOS or ARCore for Android.
+- 
 
 ## The system contains and is built on the following classes: 
 
-### ARWorldBase
+#### ARWorldBase
 
 Supplementary class that is used as a root to all MapSegment classes and also stores references to them. Every new MapSegment must be attached to the ARWorldBase class and a reference to every MapSegment instance must be added to the MapSegments array. 
 
@@ -32,7 +47,7 @@ Public properties:
 
 - MapSements: Array of MapSegment - Supplementary array that contains references to it's segments in case you need it.
 
-### MapSegment
+#### MapSegment
 
 Class that is used to define a segments of the target area's map. All FloatingIcon, Room or Vertex classes that are located in thos segment should be attached to it.
 
@@ -56,7 +71,7 @@ Public properties:
 
 - SegmentMapScale: Float - Stores a X,Y scale of the SegmentMapMaterial. Use this to adjust the floor plan to match its real world scale. The default value is 200.0.
 
-### FloatingIcon
+#### FloatingIcon
 
 Class that represents a floating in the air icon which can be used to highligh points of interests.
 
@@ -68,7 +83,7 @@ Public properties:
 
 - Text: Text - A localizable text that describes this point of interest. Will be displayed on both sides of the floating icon.
 
-### Room
+#### Room
 
 Class that represents a single room in the target area. It can be literally a room or just a small sub-area. 
 
@@ -88,7 +103,7 @@ Public properties:
 
 - Type: Enum - Stores a type of the room. Can be "Room", "Corridor", "Staircase" or "Other". The default value is "Room".
 
-### Vetrex
+#### Vetrex
 
 Fundamental class that represents a single vertex used for builing navigation paths in the target area. 
 
@@ -102,7 +117,7 @@ Public properties:
 
 - ID: String - A unique identifier for this Vertex used for search algorithms. The default value in empty.
 
-### Configuration
+#### Configuration
 
 Supplementary class that stores lists of the possible user's initial positions.
 
@@ -114,13 +129,13 @@ Public properties:
 
 - MainUIText: Struct - Contains a struct "QuickButtons" that stores a list of user's possible destinations which can be selected by the user from the main UI. Each QuickButton contains Text"(Localizable frendly name that will be displayed in the list), "Floor" Localizable frendly name of the floor that will be displayed in the main UI under the destination) and "DestinationTag" (destination Vertex ID).
 
-### 2DImageProvider
+#### 2DImageProvider
 
 Class which is responsible for rendering the 2D minimap image. 
 
 Usage: Place it anywhere on the map. Use only one instance. Do not edit or modify it somehow.
 
-### Marker
+#### Marker
 
 Class which represents a single custom marker. 
 
