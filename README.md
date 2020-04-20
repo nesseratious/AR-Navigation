@@ -8,13 +8,16 @@
 </p>
 
 
-**The system is shipped with the following features:**
+#### The system is shipped with the following features:
 - 
 
 
-**How it works?:**
+#### How it works?
 
-## CLASSES
+
+#### What problem does it solve?
+
+
 ## The system contains and is built on the following classes: 
 
 ### ARWorldBase
