@@ -17,7 +17,7 @@ The AR Navigation
 
 Supplementary class that is used as a root to all MapSegment classes and also stores references to them. Every new MapSegment must be attached to the ARWorldBase class and a reference to every MapSegment instance must be added to the MapSegments array. 
 
-Usage: Place in anywhere on the map. 
+Usage: Place it anywhere on the map. 
 
 Public properties: 
 
@@ -29,7 +29,7 @@ Public properties:
 
 Class that is used to define a segments of the target area's map. All FloatingIcon, Room or Vertex classes that are located in thos segment should be attached to it.
 
-Usage: Place in anywhere on the map and attach it to the ARWorldBase. 
+Usage: Place it anywhere on the map and attach it to the ARWorldBase. 
 
 Public properties: 
 
@@ -53,7 +53,7 @@ Public properties:
 
 Class that represents a floating in the air icon which can be used to highligh points of interests.
 
-Usage: Place in anywhere on the map segment and attach it to this segment. 
+Usage: Place it anywhere on the map segment and attach it to this segment. 
 
 Public properties: 
 
@@ -65,15 +65,27 @@ Public properties:
 
 Class that represents a single room in the target area. It can be literally a room or just a small sub-area. 
 
-Usage: Place in anywhere on the map segment and attach it to this segment. 
+Usage: Place it anywhere on the map segment and attach it to this segment. 
 
-Public properties: 
+Public properties:  
+
+- Size: Vector2D - Stores size of the room. Adjustable in design-time. If set to (0.0, 0.0) the room will set it's size automatically depending on it's surrounding. The default value is (0.0, 0.0).
+
+- Height: Float - Defines height of the room. The default value is 3.0.
+
+- Title: Text - Stores localizable text that describes the room. The default value is "No Title".
+
+- Floor: Text - Stores localizable text that describes room's floor. The default value is "First Floor".
+
+- DebugMaterial: Material - Stores a material that will be applied to room's mesh. For debuging purposes only, will be hidden in game. The default value is null.
+
+- Type: Enum - Stores a type of the room. Can be "Room", "Corridor", "Staircase" or "Other". The default value is "Room".
 
 ### Vetrex
 
-Class that represents a single room in the target area. It can be literally a room or just a small sub-area. 
+Fundamental class that represents a single vertex used for builing navigation paths in the target area. 
 
-Usage: Place in anywhere on the map segment and attach it to this segment. 
+Usage: Place it anywhere on the map segment and attach it to this segment. 
 
 Public properties: 
 
@@ -81,7 +93,7 @@ Public properties:
 
 Class that represents a single room in the target area. It can be literally a room or just a small sub-area. 
 
-Usage: Place in anywhere on the map segment and attach it to this segment. 
+Usage: Place it anywhere on the map. Use only one instance.
 
 Public properties: 
 
@@ -89,7 +101,7 @@ Public properties:
 
 Class that represents a single room in the target area. It can be literally a room or just a small sub-area. 
 
-Usage: Place in anywhere on the map segment and attach it to this segment. 
+Usage: Place it anywhere on the map. Use only one instance.
 
 Public properties: 
 
