@@ -112,6 +112,12 @@ Class which is responsible for rendering the 2D minimap image.
 
 Usage: Place it anywhere on the map. Use only one instance. Do not edit or modify it somehow.
 
+### Marker
+
+Class which represents a single custom marker. 
+
+Usage: Not intended for direct usage. Will be spawned automatically.
+
 
 ## DEBUG MODE
 
