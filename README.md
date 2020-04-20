@@ -150,9 +150,13 @@ Usage: Not intended for direct usage. Will be spawned automatically.
 ## DEBUG MODE
 
 Before 
-
+ 
 <p align="center">
   <img src="https://github.com/nesseratious/AR-Navigation-Documentation/blob/master/Images/RPReplay_Final1579277884.gif" />
+</p>
+
+<p align="center">
+  <img src="https://github.com/nesseratious/AR-Navigation-Documentation/blob/master/Images/Screen%20Shot%202020-04-20%20at%2010.13.37%20PM.png" />
 </p>
 
 ## NAVIGATION
