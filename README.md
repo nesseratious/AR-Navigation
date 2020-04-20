@@ -9,8 +9,7 @@ The AR Navigation
 </p>
 
 
-# CLASSES
-
+## CLASSES
 ## The system contains and is built on the following classes: 
 
 ### ARWorldBase
@@ -89,27 +88,32 @@ Usage: Place it anywhere on the map segment and attach it to this segment.
 
 Public properties: 
 
+- BilateralConnections: Array of Vetrex - An array of Vetrex instances connected to this vertex bilaterally (Stair, Corridor etc). Navigation path will be drawed in both directions. 
+
+- LateralConenctions: Array of Vertex - An array of Vertex instances connected to this vertex laterally (Turnstile, Escalator etc). Navigation path will be drawed only in one direction. 
+
+- ID: String - A unique identifier for this Vertex used for search algorithms. The default value in empty.
+
 ### Configuration
 
-Class that represents a single room in the target area. It can be literally a room or just a small sub-area. 
+Supplementary class that stores lists of the possible user's initial positions.
 
 Usage: Place it anywhere on the map. Use only one instance.
 
 Public properties: 
+
+- InitialPositionPage: Struct - Contains a struct "Initial Positions" that stores a the list of user's possible initial positions. Each InitialPosition stores a "Text"(Localizable frendly name that will be displayed in the list) and "TeleportToVertexTag" (Vertex ID which coornidinates will be used to virtualy teleport the user to that Vertex). The default values are missing and are implemented directly in the demo level.
+
+- MainUIText: Struct - Contains a struct "QuickButtons" that stores a list of user's possible destinations which can be selected by the user from the main UI. Each QuickButton contains Text"(Localizable frendly name that will be displayed in the list), "Floor" Localizable frendly name of the floor that will be displayed in the main UI under the destination) and "DestinationTag" (destination Vertex ID).
 
 ### 2DImageProvider
 
-Class that represents a single room in the target area. It can be literally a room or just a small sub-area. 
+Class which is responsible for rendering the 2D minimap image. 
 
-Usage: Place it anywhere on the map. Use only one instance.
+Usage: Place it anywhere on the map. Use only one instance. Do not edit or modify it somehow.
 
-Public properties: 
 
-### ARGameMode, ARPawn and ARPlayerController
-
-Cla
-
-# DEBUG MODE
+## DEBUG MODE
 
 Before 
 
@@ -117,7 +121,7 @@ Before
   <img src="https://github.com/nesseratious/AR-Navigation-Documentation/blob/master/Images/RPReplay_Final1579277884.gif" />
 </p>
 
-# NAVIGATION
+## NAVIGATION
 
 The navigation in this system is **not turn-based**, this means that the whole navigation path will be displayed once the user selects a destination. 
 
