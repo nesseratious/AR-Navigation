@@ -16,18 +16,23 @@
 - Ability to spawn custom markers that will snap to a detected surface.
 - QRCode detection.
 
-#### How it works?
-1. You place an ARWorldBase instance anywhere on the map, it will serve as target area's origin. 
-2. You place one or multiple instances of MapSegment, they will serve as containers that represent each segments properties. Multiple segments are used to divide the map by floors or by some small sub-areas. 
-3. For each MapSegment you assign it's floor map (used only for debuging purposses and will be hidden in the app) and a static mesh that represents segment's map in the real world. You can adjust the scale of the segment to match it's real world scale.
-4.
-5.
-6.
-7.
+#### How to set it up?
+1. Place an ARWorldBase instance anywhere on the map, it will serve as target area's origin. 
+2. In ARWorldBase properties enter target area's rotation relative to the world true north.
+3. Place one or multiple instances of MapSegment, they will serve as containers that represent each segments properties. Multiple segments are used to divide the map by floors or by some small sub-areas. Attach each MapSegment to the ARWorldBase.
+4. For each MapSegment you assign it's floor map (used only for debuging purposses and will be hidden in the app) and a static mesh that represents segment's map in the real world. 
+5. Adjust scale of the segment to match it's real world scale (it is very important!).
+6. Build navigation graph placing Vertex instances on your map segments and connecting them using BilateralConnections and LateralConnections arrays. Give an ID to every Vertex that represents a destination point (user will be able to perform search using this ID). Verticles that are used only to connect other verticles should have their's ID field empty. Attach all places vertices to the map segment they belong.
+
+**Navigation is ready! The next steps are not required, but will greatly improve user experience.**
+
+7. 
 8.
 9.
+10.
 
-#### What problem does it solve?
+#### How it works?
+1. 
 
 #### Requirements:
 - The device must support ARKit for iOS or ARCore for Android.
