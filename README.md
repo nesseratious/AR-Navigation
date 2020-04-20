@@ -16,6 +16,9 @@
 - Ability to spawn custom markers that will snap to a detected surface.
 - QRCode detection.
 
+### How it works?
+1. 
+
 ### How to set it up?
 1. Place an ARWorldBase instance anywhere on the map, it will serve as target area's origin. 
 2. In ARWorldBase properties enter target area's rotation relative to the world true north.
@@ -27,18 +30,18 @@
 **Navigation is ready! The next steps are not required, but will greatly improve user experience.**
 
 7. Place a FloatingIcon instance where there is a possible point of interest. Enter its name and a material containing its icon. Attach all placed FloatingIcon instances to the map segment they belong. 
-8. Place Room instances that represent each room 
-9.
+8. Place all Room instances that represent each room. Set theirs size or leave it zero for automatic size detection. Rooms are not required and are not used by default. The main reason why you can use them is to get user location in real-time by using the room as a trigger. Attach all placed Room instances to the map segment they belong. 
+9. 
 10.
 
-### How it works?
-1. 
+### Demo Level
+The pack comes with a demo level. 
 
-#### Requirements:
+### Requirements:
 - The device must support ARKit for iOS or ARCore for Android.
 - Scale of each segment must match it's real world scale with **the smallest possible error**. Even very small mismatches in scale will lead to big cascading increase in the error level depending on the distance traveled!
 
-## The system contains and is built on the following classes: 
+### The system contains and is built on the following classes: 
 
 #### ARWorldBase
 
