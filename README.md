@@ -31,7 +31,7 @@
 
 #### Requirements:
 - The device must support ARKit for iOS or ARCore for Android.
-- 
+- Scale of each segment must match it's real world scale with **the smallest possible error**. Even very small mismatches in scale will lead to big cascading increase in the error level depending on the distance traveled!
 
 ## The system contains and is built on the following classes: 
 
