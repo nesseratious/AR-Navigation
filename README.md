@@ -1,6 +1,6 @@
 # AR-Navigation-Documentation
 
-The AR Navigation 
+**AR Navigation** is a system for Unreal Engine which allows creating apps for iOS and Android that uses AR for navigitaion inside a given target area. 
  
 - 
 
@@ -20,7 +20,7 @@ Usage: Place it anywhere on the map.
 
 Public properties: 
 
-- WorldTrueNorthAngel: Float - Stores the rotation shift of the target area relatinve to the true polar pole. You can get the rotation shift of yout target area using Google Maps and calculating angle of rotation relative to latitude(any vertical line). The ARWorldBase class will rotate to the given angle with a short delay when the applications starts. The delay is needed to allow attached MapSegments and it's Room's to calculate their size and position using the provided model of the target area (Static Mesh). The default value is zero.
+- WorldTrueNorthAngel: Float - Stores the rotation shift of the target area relative to the true polar pole. You can get the rotation shift of yout target area using Google Maps and calculating angle of rotation relative to latitude(any vertical line). The ARWorldBase class will rotate to the given angle with a short delay when the applications starts. The delay is needed to allow attached MapSegments and it's Room's to calculate their size and position using the provided model of the target area (Static Mesh). The default value is zero.
 
 - MapSements: Array of MapSegment - Supplementary array that contains references to it's segments in case you need it.
 
