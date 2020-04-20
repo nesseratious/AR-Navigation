@@ -8,7 +8,7 @@
 </p>
 
 
-#### The system is shipped with the following features:
+### The system is shipped with the following features:
 - Automatic calculation of the optimal route.
 - Dynamic minimap that shows user's current location.
 - Intuitive UI that shows user's destination and has a list of quick buttons for predefined destinations.
@@ -16,22 +16,22 @@
 - Ability to spawn custom markers that will snap to a detected surface.
 - QRCode detection.
 
-#### How to set it up?
+### How to set it up?
 1. Place an ARWorldBase instance anywhere on the map, it will serve as target area's origin. 
 2. In ARWorldBase properties enter target area's rotation relative to the world true north.
 3. Place one or multiple instances of MapSegment, they will serve as containers that represent each segments properties. Multiple segments are used to divide the map by floors or by some small sub-areas. Attach each MapSegment to the ARWorldBase.
 4. For each MapSegment you assign it's floor map (used only for debuging purposses and will be hidden in the app) and a static mesh that represents segment's map in the real world. 
 5. Adjust scale of the segment to match it's real world scale (it is very important!).
-6. Build navigation graph placing Vertex instances on your map segments and connecting them using BilateralConnections and LateralConnections arrays. Give an ID to every Vertex that represents a destination point (user will be able to perform search using this ID). Verticles that are used only to connect other verticles should have their's ID field empty. Attach all places vertices to the map segment they belong.
+6. Build navigation graph by placing Vertex instances on your map segments and connecting them using BilateralConnections and LateralConnections arrays. Give an ID to every Vertex that represents a destination point (user will be able to perform search using this ID). Verticles that are used only to connect other verticles should have theirs ID field empty. Attach all placed vertices to the map segment they belong.
 
 **Navigation is ready! The next steps are not required, but will greatly improve user experience.**
 
-7. 
-8.
+7. Place a FloatingIcon instance where there is a possible point of interest. Enter its name and a material containing its icon. Attach all placed FloatingIcon instances to the map segment they belong. 
+8. Place Room instances that represent each room 
 9.
 10.
 
-#### How it works?
+### How it works?
 1. 
 
 #### Requirements:
