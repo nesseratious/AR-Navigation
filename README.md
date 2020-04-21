@@ -1,6 +1,6 @@
 # AR-Navigation-Documentation
 
-### AR Navigation is a system for Unreal Engine which allows creating apps for iOS and Android that uses AR to navigate within a given target area. 
+### AR Navigation allows creating apps for iOS and Android that uses AR to navigate within a given target area. 
 
 
 <p align="center">
@@ -8,7 +8,7 @@
 </p>
 
 
-### The system is shipped with the following features:
+### Features:
 - Automatic calculation of the optimal route.
 - Dynamic minimap that shows user's current location.
 - Intuitive UI that shows user's destination and has a list of quick buttons for predefined destinations.
@@ -31,8 +31,8 @@
 
 7. Place a FloatingIcon instance where there is a possible point of interest. Enter its name and a material containing its icon. Attach all placed FloatingIcon instances to the map segment they belong. 
 8. Place all Room instances that represent each room. Set theirs size or leave it zero for automatic size detection. Rooms are not required and are not used by default. The main reason why you can use them is to get user location in real-time by using the room as a trigger. Attach all placed Room instances to the map segment they belong. 
-9. 
-10.
+9. In the Configuration class properties fill the InitialPositionPage and MainUIText arrays with your possible user initial positions and available destinations for the main UI.
+10. Replace the default QR code texture that comes with the project with your own. 
 
 ### Demo Level
 The pack comes with a demo level. 
