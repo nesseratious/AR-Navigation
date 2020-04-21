@@ -10,21 +10,21 @@
 
 ### Features:
 - Automatic calculation of the optimal route.
-- Dynamic minimap that shows user's current location.
-- Intuitive UI that shows user's destination and has a list of quick buttons for predefined destinations.
+- Dynamic minimap that shows users current location.
+- Intuitive UI that shows users destination and has a list of quick buttons for predefined destinations.
 - Floating Icons to hightlight possible points of interest.
-- Ability to spawn custom markers that will snap to a detected surface.
+- Custom markers that can snap to a detected surface.
 - QRCode detection.
 
 ### How it works?
 1. 
 
 ### How to set it up?
-1. Place an ARWorldBase instance anywhere on the map, it will serve as target area's origin. 
-2. In ARWorldBase properties enter target area's rotation relative to the world true north.
+1. Place an ARWorldBase instance anywhere on the map, it will serve as target areas origin. 
+2. In ARWorldBase properties enter target areas rotation relative to the world true north.
 3. Place one or multiple instances of MapSegment, they will serve as containers that represent each segments properties. Multiple segments are used to divide the map by floors or by some small sub-areas. Attach each MapSegment to the ARWorldBase.
-4. For each MapSegment you assign it's floor map (used only for debuging purposses and will be hidden in the app) and a static mesh that represents segment's map in the real world. 
-5. Adjust scale of the segment to match it's real world scale (it is very important!).
+4. For each MapSegment assign its floor map (used only for debuging purposses and will be hidden in the app) and a static mesh that represents segments map in the real world. 
+5. Adjust scale of the segment to match its real world scale (it's very important!).
 6. Build navigation graph by placing Vertex instances on your map segments and connecting them using BilateralConnections and LateralConnections arrays. Give an ID to every Vertex that represents a destination point (user will be able to perform search using this ID). Verticles that are used only to connect other verticles should have theirs ID field empty. Attach all placed vertices to the map segment they belong.
 
 **Navigation is ready! The next steps are not required, but will greatly improve user experience.**
@@ -35,29 +35,29 @@
 10. Replace the default QR code texture that comes with the project with your own. 
 
 ### Demo Level
-The pack comes with a demo level. 
+The pack comes with a demo level that represents the first floor of my university with an area of 80mx60m. It was tested on multiple iOS devices by multiple users, the feedback showed high level of interest in the product and its usefulness.
 
 ### Requirements:
 - The device must support ARKit for iOS or ARCore for Android.
-- Scale of each segment must match it's real world scale with **the smallest possible error**. Even very small mismatches in scale will lead to big cascading increase in the error level depending on the distance traveled!
+- Scale of each segment must match its real world scale with **the smallest possible error**. Even very small mismatches in scale will lead to big cascading increase in the error level depending on the distance traveled!
 
-### The system contains and is built on the following classes: 
+### The system contains the following classes: 
 
 #### ARWorldBase
 
-Supplementary class that is used as a root to all MapSegment classes and also stores references to them. Every new MapSegment must be attached to the ARWorldBase class and a reference to every MapSegment instance must be added to the MapSegments array. 
+Supplementary class that is used as a root to all MapSegment classes and also stores references to them. Every new MapSegment should be attached to the ARWorldBase class and a reference to every MapSegment instance should be added to the MapSegments array. 
 
 Usage: Place it anywhere on the map. 
 
 Public properties: 
 
-- WorldTrueNorthAngel: Float - Stores the rotation shift of the target area relative to the true polar pole. You can get the rotation shift of yout target area using Google Maps and calculating angle of rotation relative to latitude(any vertical line). The ARWorldBase class will rotate to the given angle with a short delay when the applications starts. The delay is needed to allow attached MapSegments and it's Room's to calculate their size and position using the provided model of the target area (Static Mesh). The default value is zero.
+- WorldTrueNorthAngel: Float - Stores rotation shift of the target area relative to the true polar pole. You can get the rotation shift of yout target area using Google Maps and calculating angle of rotation relative to a latitude(any vertical line). The ARWorldBase class will rotate to the given angle with a short delay when the applications starts. The delay is needed to allow attached MapSegments and its Rooms to calculate their size and position using the provided model of the target area (Static Mesh). The default value is zero.
 
-- MapSements: Array of MapSegment - Supplementary array that contains references to it's segments in case you need it.
+- MapSements: Array of MapSegment - Supplementary array that contains references to its segments in case you need it.
 
 #### MapSegment
 
-Class that is used to define a segments of the target area's map. All FloatingIcon, Room or Vertex classes that are located in thos segment should be attached to it.
+Class that is used to define a segments of the target areas map. All FloatingIcon, Room or Vertex classes that are located in thos segment should be attached to it.
 
 Usage: Place it anywhere on the map and attach it to the ARWorldBase. 
 
@@ -65,25 +65,25 @@ Public properties:
 
 - Floor: Integer - Stores a floor number of the segment. The default value is zero.
 
-- FloorDisplayedText: Text - Stores a localizable text that describes the segment's floor. Keep in mind that segments can be used not only to differentiate floors, but also to divide a complex map into more small pieces in case the target area is big enoght.  The default value is "<Enter Floor Name>".
+- FloorDisplayedText: Text - Stores a localizable text that describes the segments floor. Keep in mind that segments can be used not only to differentiate floors, but also to divide a complex map into more small pieces in case the target area is big enoght. The default value is "<Enter Floor Name>".
  
 - SegmentMesh: StaticMesh - Fundamental mesh that defines the area of the segment. It is used in the minimap (white colour material) and in the segment itsef (transparent material) in case you will want to do a turn-based navigation(described in the NAVIGATION section). The default value is null.
 
-- SegmentOffset: Vector2D - Stores an X,Y offset of the segment's mesh relative to the segments's origin. The default value is (0.0, 0.0).
+- SegmentOffset: Vector2D - Stores the X,Y offset of the segments mesh relative to the segmentss origin. The default value is (0.0, 0.0).
 
-- SegmentHeight: Float - Stores the height of the segment's mesh in metres. For this to work, the segment's mesh should be 1 metre in height. Alternatively you can create a mesh with aby height and set SegmentHeight to 1.0. The default value is 1.0.
+- SegmentHeight: Float - Stores the height of the segments mesh in metres. For this to work, the segments mesh should be 1 metre in height. Alternatively you can create a mesh with any height and set SegmentHeight to 1.0. The default value is 1.0.
 
-- SegmentScale: Float - Stores the all axes scale multiplier of the segment's mesh. The default value is (1.0, 1.0, 1.0).
+- SegmentScale: Float - Stores all axes scale multiplier of the segments mesh. The default value is (1.0, 1.0, 1.0).
 
-- SegmentMapMaterial: Material - A supplementary material that is used to show the target's floor plan. This is only need to simplify the vertex and room arrangement on the segment. The metarial is only shown in the editor and is hidden in the game. The default value is null.
+- SegmentMapMaterial: Material - A supplementary material that is used to show the targets floor plan. This is only need to simplify the vertex and room arrangement on the segment. The metarial is only shown in the editor and is hidden in the game. The default value is null.
 
-- SegmentMapScale: Float - Stores a X,Y scale of the SegmentMapMaterial. Use this to adjust the floor plan to match its real world scale. The default value is 200.0.
+- SegmentMapScale: Float - Stores the X,Y scale of the SegmentMapMaterial. Use this to adjust the floor plan to match its real world scale. The default value is 200.0.
 
 #### FloatingIcon
 
-Class that represents a floating in the air icon which can be used to highligh points of interests.
+Class that represents a floating icon which can be used to highligh points of interests.
 
-Usage: Place it anywhere on the map segment and attach it to this segment. 
+Usage: Place it anywhere on the map segment and attach it to the segment. 
 
 Public properties: 
 
@@ -95,19 +95,19 @@ Public properties:
 
 Class that represents a single room in the target area. It can be literally a room or just a small sub-area. 
 
-Usage: Place it anywhere on the map segment and attach it to this segment. 
+Usage: Place it anywhere on the map segment and attach it to the segment. 
 
 Public properties:  
 
-- Size: Vector2D - Stores size of the room. Adjustable in design-time. If set to (0.0, 0.0) the room will set it's size automatically depending on it's surrounding. The default value is (0.0, 0.0).
+- Size: Vector2D - Stores size of the room. Adjustable in design-time. If set to zero the room will set its size automatically depending on its surrounding. The default value is (0.0, 0.0).
 
 - Height: Float - Defines height of the room. The default value is 3.0.
 
-- Title: Text - Stores localizable text that describes the room. The default value is "No Title".
+- Title: Text - Stores a localizable text that describes the room. The default value is "No Title".
 
-- Floor: Text - Stores localizable text that describes room's floor. The default value is "First Floor".
+- Floor: Text - Stores a localizable text that describes rooms floor. The default value is "First Floor".
 
-- DebugMaterial: Material - Stores a material that will be applied to room's mesh. For debuging purposes only, will be hidden in game. The default value is null.
+- DebugMaterial: Material - Stores a material that will be applied to rooms mesh. For debuging purposes only, will be hidden in game. The default value is null.
 
 - Type: Enum - Stores a type of the room. Can be "Room", "Corridor", "Staircase" or "Other". The default value is "Room".
 
