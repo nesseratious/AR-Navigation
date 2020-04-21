@@ -10,14 +10,14 @@
 
 ### Features:
 - Automatic calculation of the optimal route.
-- Dynamic minimap that shows users current location.
+- Dynamic minimap that shows user current location.
 - Intuitive UI that shows users destination and has a list of quick buttons for predefined destinations.
 - Floating Icons to hightlight possible points of interest.
 - Custom markers that can snap to a detected surface.
 - QRCode detection.
 
 ### How it works?
-1. 
+1. When the user launches your app, they will be prompted to scan the QR code used to download the app. This is 
 
 ### How to set it up?
 1. Place an ARWorldBase instance anywhere on the map, it will serve as target areas origin. 
@@ -25,14 +25,14 @@
 3. Place one or multiple instances of MapSegment, they will serve as containers that represent each segments properties. Multiple segments are used to divide the map by floors or by some small sub-areas. Attach each MapSegment to the ARWorldBase.
 4. For each MapSegment assign its floor map (used only for debuging purposses and will be hidden in the app) and a static mesh that represents segments map in the real world. 
 5. Adjust scale of the segment to match its real world scale (it's very important!).
-6. Build navigation graph by placing Vertex instances on your map segments and connecting them using BilateralConnections and LateralConnections arrays. Give an ID to every Vertex that represents a destination point (user will be able to perform search using this ID). Verticles that are used only to connect other verticles should have theirs ID field empty. Attach all placed vertices to the map segment they belong.
+6. Build navigation graph by placing Vertex instances on your map segments and connecting them using BilateralConnections and LateralConnections arrays. Give an ID to every Vertex that represents a destination point (user will be able to perform search using this ID). Vertices that are used only to connect other vertices should have theirs ID field empty. Attach all placed vertices to the map segment they belong.
 
 **Navigation is ready! The next steps are not required, but will greatly improve user experience.**
 
 7. Place a FloatingIcon instance where there is a possible point of interest. Enter its name and a material containing its icon. Attach all placed FloatingIcon instances to the map segment they belong. 
 8. Place all Room instances that represent each room. Set theirs size or leave it zero for automatic size detection. Rooms are not required and are not used by default. The main reason why you can use them is to get user location in real-time by using the room as a trigger. Attach all placed Room instances to the map segment they belong. 
 9. In the Configuration class properties fill the InitialPositionPage and MainUIText arrays with your possible user initial positions and available destinations for the main UI.
-10. Replace the default QR code texture that comes with the project with your own. 
+10. Replace the default QR code texture that comes with the project with your own. Put a vertex where your QR code in located in the real world and set its ID to "QRCode".
 
 ### Demo Level
 The pack comes with a demo level that represents the first floor of my university with an area of 80mx60m. It was tested on multiple iOS devices by multiple users, the feedback showed high level of interest in the product and its usefulness.
@@ -152,7 +152,7 @@ Usage: Not intended for direct usage. Will be spawned automatically.
 
 ## DEBUG MODE
 
-Before 
+To toggle debug mode tap on the "Debug" button located in the top left corner. The debug mode will display all vertices and their axes. This will allow you to test how virtual world matches the real one. 
  
 <p align="center">
   <img src="https://github.com/nesseratious/AR-Navigation-Documentation/blob/master/Images/RPReplay_Final1579277884.gif" />
