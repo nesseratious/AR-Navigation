@@ -135,7 +135,7 @@ Public properties:
 
 - BilateralConnections: Array of Vetrex - An array of Vertex instances connected to this vertex bilaterally (Stair, Corridor, etc). The navigation path will be drawn in both directions. 
 
-- LateralConenctions: Array of Vertex - An array of Vertex instances connected to this vertex laterally (Turnstile, Escalator, etc). The navigation path will be drawn only in one direction. 
+- LateralConnections: Array of Vertex - An array of Vertex instances connected to this vertex laterally (Turnstile, Escalator, etc). The navigation path will be drawn only in one direction. 
 
 - ID: String - A unique identifier for this Vertex used for search algorithms. The default value is empty.
 
