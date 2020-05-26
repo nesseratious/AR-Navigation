@@ -22,8 +22,7 @@ void AVertex::BeginPlay()
 
 void AVertex::Tick(float DeltaTime)
 {
-	Super::Tick(DeltaTime);
-	
+	Super::Tick(DeltaTime)
 }
 
 void AVertex::buildNavigationPath(const FString searchTag)
@@ -37,33 +36,26 @@ void AVertex::buildNavigationPath(const FString searchTag)
 void AVertex::searchFor(const FString destinationTag, const FString departureTag)
 {
 	if (this->Tag == destinationTag)
-    {
-
+   	{
 		isVisited = true;
 		this->recreatePath(departureTag);
-
-	} else {
-
+	} else 
+	{
 		if (!isVisited)
 		{
 			GEngine->AddOnScreenDebugMessage(-1, 500.f, FColor::Green, FString::Printf(TEXT("Searching from %s to %s"), *this->Tag, *destinationTag));
-
 			for (auto& vertex : connectedVerticles)
 			{
 				float newDistance = shortestLength + GetDistanceTo(vertex);
 				float storedDistance = vertex->shortestLength;
-
 				GEngine->AddOnScreenDebugMessage(-1, 500.f, FColor::Blue, FString::Printf(TEXT("Iterating from %s to %s %f"), *this->Tag, *vertex->Tag, newDistance));
-
 				if (newDistance < storedDistance)
 				{
 					vertex->shortestLength = newDistance;
 					this->didUpdateShortest(newDistance);
 				}
 			}
-
 			isVisited = true;
-
 			for (auto& nextVertex : connectedVerticles)
 			{
 				nextVertex->searchFor(destinationTag, departureTag);
