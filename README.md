@@ -80,7 +80,7 @@ Public properties:
 
 - FloorDisplayedText: Text - Stores a localizable text that describes the segment's floor. Keep in mind that segments can be used not only to differentiate floors but also to divide a complex map into more small pieces in case the target area is big enough. The default value is "<Enter Floor Name>".
  
-- SegmentMesh: StaticMesh - Fundamental mesh that defines the area of the segment. It is used in the minimap (white color material) and in the segment itself (transparent material) in case you will want to do turn-based navigation(described in the NAVIGATION section). The default value is null.
+- SegmentMesh: StaticMesh - Fundamental mesh that defines the area of the segment. The default value is null.
 
 - SegmentOffset: Vector2D - Stores the X,Y offset of the segment's mesh relative to the segment's origin. The default value is (0.0, 0.0).
 
@@ -184,7 +184,7 @@ The navigation in this system is **not turn-based**, this means that the whole n
 </p>
 
 
-If you want to opt-out of this behavior and hide all navigation arrows that are behind the walls, you can do so by adding built-in unreals function LineTraceByChannel to the Arrow class blueprint, where the start point will be player's camera and the endpoint will be world location of the Arrow instance. Depending on whether the arrow instance was hit or not, you can call SetVisibility function to hide or unhide the arrow. Do not call LineTraceByChannel every frame as this will degrade performance. Put it on a timer to call only 5 times per second, you can do so by wiring a CustomEvent to your function and adding a built-in function SetTimerByFunctionName with your CustomEvent name. The visualization of such algorithm would look like this:
+If you want to opt-out of this behavior and hide all navigation arrows that are behind the walls, you can do so by adding built-in unreals function LineTraceByChannel to the Arrow class blueprint, where the start point will be player's camera and the endpoint will be world location of the Arrow instance. Depending on whether the arrow instance was hit or not, you can call SetVisibility function to hide or unhide the arrow. The visualization of such algorithm would look like this:
 
 <p align="center">
   <img src="https://github.com/nesseratious/AR-Navigation-Documentation/blob/master/Images/111.png" />
