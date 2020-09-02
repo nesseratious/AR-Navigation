@@ -1,7 +1,6 @@
-# AR-Navigation-Documentation
+# AR-Navigation
 
-### AR Navigation allows creating apps for iOS and Android that uses AR to navigate within a given target area. 
-
+### AR Navigation allows creating apps that use AR to navigate within a given target area. 
 
 <p align="center">
   <img src="https://github.com/nesseratious/AR-Navigation-Documentation/blob/master/Images/RPReplay_Final1579278581.gif" />
