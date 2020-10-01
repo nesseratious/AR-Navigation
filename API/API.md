@@ -3,7 +3,7 @@
 
 #### World mapping classes:
 
-[ARWorldBase](https://github.com/nesseratious/AR-Navigation/blob/master/Documentation/Debug.md) 
+[ARWorldBase](https://github.com/nesseratious/AR-Navigation/blob/master/API/ARWorldBase.md) 
  
 The supplementary class that is used as a root to all MapSegment classes and also stores references to them. Every new MapSegment should be attached to the ARWorldBase class.
 
