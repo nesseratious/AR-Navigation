@@ -13,3 +13,10 @@
 - Floating Icons to highlight possible points of interest.
 - Custom markers that can snap to a detected surface.
 - QRCode detection. 
+
+ [How It Works?](https://github.com/nesseratious/AR-Navigation/blob/master/Documentation/How-It-Works.md)
+ 
+ [Requirements](https://github.com/nesseratious/AR-Navigation/blob/master/Documentation/Requirements.md)
+ 
+ [How To Set It Up?](https://github.com/nesseratious/AR-Navigation/blob/master/Documentation/AR-Navigation-How-To-Set-It-Up.md)
+ 
