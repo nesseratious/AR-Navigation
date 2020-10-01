@@ -12,13 +12,13 @@
 
  [How It Works?](https://github.com/nesseratious/AR-Navigation/blob/master/Documentation/How-It-Works.md)
  
- [Requirements](https://github.com/nesseratious/AR-Navigation/blob/master/Documentation/Requirements.md)
+ [Requirements?](https://github.com/nesseratious/AR-Navigation/blob/master/Documentation/Requirements.md)
  
  [How To Set It Up?](https://github.com/nesseratious/AR-Navigation/blob/master/Documentation/AR-Navigation-How-To-Set-It-Up.md)
  
- [How To Debug](https://github.com/nesseratious/AR-Navigation/blob/master/Documentation/Debug.md)
+ [How To Debug?](https://github.com/nesseratious/AR-Navigation/blob/master/Documentation/Debug.md)
 
- [API Documentation](https://github.com/nesseratious/AR-Navigation/blob/master/Documentation/Debug.md)
+ [API Documentation](https://github.com/nesseratious/AR-Navigation/blob/master/API/API.md)
  
 ## Working demo:
  <p align="center">
