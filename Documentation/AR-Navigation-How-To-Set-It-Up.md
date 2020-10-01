@@ -1,6 +1,6 @@
 ### This page describes how to set up environment for **AR Navigation** system.
 
-### **AR Navigation** system allows creating navigation apps using a desktop computer, so the environment should be mapped statically (known at compile time), no dynamic changes in the environment is allowed for this system. To set it up follow this steps:
+### **AR Navigation** system allows creating navigation apps using AR technologies. To set it up follow this steps:
 
 1. Place an ARWorldBase instance anywhere on the map, it will serve as an origin for the target area.
 
