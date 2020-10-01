@@ -20,7 +20,7 @@
 
  [API Documentation](https://github.com/nesseratious/AR-Navigation/blob/master/API/API.md)
  
-## Working demo:
+## Working demo
  <p align="center">
   <img src="https://github.com/nesseratious/AR-Navigation-Documentation/blob/master/Images/RPReplay_Final1579278581.gif" />
 </p>
