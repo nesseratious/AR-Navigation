@@ -1,5 +1,6 @@
 ### AR Navigation public classes.
 
+
 #### World mapping classes:
 
 [ARWorldBase](https://github.com/nesseratious/AR-Navigation/blob/master/Documentation/Debug.md) 
@@ -21,6 +22,7 @@ The class represents a floating icon that can be used to highlight points of int
 [Room](https://github.com/nesseratious/AR-Navigation/blob/master/API/Room.md) 
 
 The class that represents a single room in the target area. It can be literally a room or just a small sub-area.
+  
   
 #### Supplementary classes:
    
