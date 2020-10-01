@@ -6,7 +6,6 @@
   <img src="https://github.com/nesseratious/AR-Navigation-Documentation/blob/master/Images/RPReplay_Final1579278581.gif" />
 </p>
 
-
 ### Features:
 - Automatic calculation of the optimal route.
 - Dynamic 3D minimap that shows user's current location and roration.
@@ -14,44 +13,6 @@
 - Floating Icons to highlight possible points of interest.
 - Custom markers that can snap to a detected surface.
 - QRCode detection. 
-
-### How it works?
-
-1. When the user launches your app, they will be prompted to scan the QR code used to download the app. This is needed to immediately set their position in the virtual world. Using such QR code is the most convenient way to ensure the accuracy of the user position. Also, you can use any image which can fit on an A4 sheet instead of a QR code.  
-
-2. Alternatively, the user can select their position from a predefined list. In the demo level, this list contains 5 most popular positions for the chosen target area. Buttons are embedded into a scroll box, so you can add as many predefined positions as you want. Also, the user can select their position using manual input. In this scenario, the user's position will be set to a vertex with an ID that they have entered. To make this process easy and convenient for the user, set vertices ID to some friendly name (for example "Canteen" or "Assembly Hall").
-
-3. After the initial position is set, the app starts the AR session. Now the app and its minimap will react to user's movements seamlessly using visual-inertial odometry provided by ARKit and ARCore runtimes.
-
-4. The user can choose a destination point from a predefined menu or enter it manually. The app searches for a vertex with the given ID and marks it as a destination point.
-
-5. The navigation path from the user's current location to the destination point will be calculated in real-time and displayed as a spline with animated arrows. Also, the app will display remained distance in real-time.
-
-6. During the whole period of navigation, the app will show user's location and rotation relative to true north on the dynamic 3D minimap. 
-
-7. The user can tap on any detected surface to place a custom marker. The marker will snap to the surface, and will show its given name and distance to the user.
-
-
-### How to set it up?
-1. Place an ARWorldBase instance anywhere on the map, it will serve as an origin for the target area. 
-2. In ARWorldBase properties enter rotation of thr target area relative to the world true north.
-3. Place one or multiple instances of MapSegment, they will serve as containers that represent the properties of each segment. Multiple segments are used to divide the map by floors or by some small sub-areas. Attach each MapSegment to the ARWorldBase.
-4. For each MapSegment assign its floor map (used only for debugging purposes, will be hidden in the app) and a static mesh that represents the segment's map in the real world. 
-5. Adjust the scale of the segment to match its real-world scale (it's very important!).
-6. Build a navigation graph by placing Vertex instances on your map segments and connecting them using BilateralConnections and LateralConnections arrays. Give an ID to every Vertex that represents a destination point (user will be able to perform a search using this ID). Vertices that are used only to connect other vertices should have their ID field empty. Attach all placed vertices to the map segment they belong to.
-7. [Optional] Place a FloatingIcon instance where there is a possible point of interest. Enter its name and a material containing its icon. Attach all placed FloatingIcon instances to the map segment they belong to. 
-8. [Optional] Place all Room instances that represent each room. Set their size or leave it zero for automatic size detection. Rooms are not required and are not used by default. The main reason why you can use them is to get user location in real-time by using the room as a trigger. Attach all placed Room instances to the map segment they belong to. 
-9. In the Configuration class properties fill the InitialPositionPage and MainUIText arrays with your possible user's initial positions and available destinations for the main UI.
-10. Replace the default QR code texture that comes with the project with your own. Put a vertex where your QR code is located in the real world and set its ID to "QRCode".
-
-### Demo Level
-The pack comes with a demo level that represents the first floor of my university with an area of 80mx60m. It was tested on multiple iOS devices by multiple users, the feedback showed a high level of interest in the product and its usefulness.
-
-### Requirements:
-- The device must support ARKit for iOS or ARCore for Android.
-- The scale of each segment must match its real-world scale with **the smallest possible error**. Even very small mismatches in scale will lead to a big cascading increase in the error level depending on the distance traveled!
-
-
 
 ### The system contains the following classes: 
 
