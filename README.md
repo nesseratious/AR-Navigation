@@ -16,6 +16,10 @@
  
  [How To Set It Up?](https://github.com/nesseratious/AR-Navigation/blob/master/Documentation/AR-Navigation-How-To-Set-It-Up.md)
  
+ [How To Debug](https://github.com/nesseratious/AR-Navigation/blob/master/Documentation/Debug.md)
+
+ [API Documentation](https://github.com/nesseratious/AR-Navigation/blob/master/Documentation/Debug.md)
+ 
 ## Working demo:
  <p align="center">
   <img src="https://github.com/nesseratious/AR-Navigation-Documentation/blob/master/Images/RPReplay_Final1579278581.gif" />
