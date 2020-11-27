@@ -1,16 +1,13 @@
-### AR Navigation public classes.
-
-
-#### World mapping classes:
+### World mapping classes:
 
 ### [ARWorldBase](https://github.com/nesseratious/AR-Navigation/blob/master/API/ARWorldBase.md) 
  
-The supplementary class that is used as a root to all MapSegment classes and also stores references to them. Every new MapSegment should be attached to the ARWorldBase class.
+The supplementary class that is used as a root to all [MapSegment](https://github.com/nesseratious/AR-Navigation/blob/master/API/MapSegment.md) classes and also stores references to them. Every new [MapSegment](https://github.com/nesseratious/AR-Navigation/blob/master/API/MapSegment.md) should be attached to the [ARWorldBase](https://github.com/nesseratious/AR-Navigation/blob/master/API/ARWorldBase.md) class.
 
 
 ### [MapSegment](https://github.com/nesseratious/AR-Navigation/blob/master/API/MapSegment.md) 
 
-The class that is used to define segments of the target area. All FloatingIcon, Room, and Vertex classes that are located in this segment should be attached to it.
+The class that is used to define segments of the target area. All [FloatingIcon](https://github.com/nesseratious/AR-Navigation/blob/master/API/FloatingIcon.md) , [Room](https://github.com/nesseratious/AR-Navigation/blob/master/API/Room.md), and [Vertex](https://github.com/nesseratious/AR-Navigation/blob/master/API/Vetrex.md) classes that are located in this segment should be attached to it.
   
 ### [Vertex](https://github.com/nesseratious/AR-Navigation/blob/master/API/Vetrex.md) 
 
@@ -25,7 +22,7 @@ The class represents a floating icon that can be used to highlight points of int
 The class that represents a single room in the target area. It can be literally a room or just a small sub-area.
   
   
-#### Supplementary classes:
+### Supplementary classes:
    
 ### [2DImageProvider](https://github.com/nesseratious/AR-Navigation/blob/master/API/2DImageProvider.md) 
     
