@@ -20,6 +20,12 @@
 
  [API Documentation](https://github.com/nesseratious/AR-Navigation/blob/master/API/API.md)
  
+ [Data Assets Documentation](https://github.com/nesseratious/AR-Navigation/blob/master/API/DataAssets.md)
+ 
+ [Project Assets Documentation](https://github.com/nesseratious/AR-Navigation/blob/master/API/ProjectAssets.md)
+ 
+ [Update Log](https://github.com/nesseratious/AR-Navigation/blob/master/UpdateLog.md)
+ 
 ## Working demo
  <p align="center">
   <img src="https://github.com/nesseratious/AR-Navigation-Documentation/blob/master/Images/RPReplay_Final1579278581.gif" />
