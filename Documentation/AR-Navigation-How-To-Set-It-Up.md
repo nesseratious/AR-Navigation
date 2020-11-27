@@ -4,7 +4,7 @@
 
 2. In [ARWorldBase](https://github.com/nesseratious/AR-Navigation/blob/master/API/ARWorldBase.md)  properties enter rotation of the target area relative to the world true north.
 
-3. Place one or multiple instances of [MapSegment](https://github.com/nesseratious/AR-Navigation/blob/master/API/MapSegment.md), they will serve as containers that represent the properties of each segment. Multiple segments are used to divide the map by floors or by some small sub-areas. Attach each [MapSegment](https://github.com/nesseratious/AR-Navigation/blob/master/API/MapSegment.md)  to the ARWorldBase.
+3. Place one or multiple instances of [MapSegment](https://github.com/nesseratious/AR-Navigation/blob/master/API/MapSegment.md), they will serve as containers that represent the properties of each segment. Multiple segments are used to divide the map by floors or by some small sub-areas. Attach each [MapSegment](https://github.com/nesseratious/AR-Navigation/blob/master/API/MapSegment.md) to the [ARWorldBase](https://github.com/nesseratious/AR-Navigation/blob/master/API/ARWorldBase.md).
 
 4. For each [MapSegment](https://github.com/nesseratious/AR-Navigation/blob/master/API/MapSegment.md) assign its floor map (used only for debugging purposes, will be hidden in the app) and a static mesh that represents the segment's map in the real world.
 
