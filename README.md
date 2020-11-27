@@ -20,9 +20,9 @@
 
  [API Documentation](https://github.com/nesseratious/AR-Navigation/blob/master/API/API.md)
  
- [Data Assets Documentation](https://github.com/nesseratious/AR-Navigation/blob/master/API/DataAssets.md)
+ [Data Assets](https://github.com/nesseratious/AR-Navigation/blob/master/API/DataAssets.md)
  
- [Project Assets Documentation](https://github.com/nesseratious/AR-Navigation/blob/master/API/ProjectAssets.md)
+ [Project Assets](https://github.com/nesseratious/AR-Navigation/blob/master/API/ProjectAssets.md)
  
  [Update Log](https://github.com/nesseratious/AR-Navigation/blob/master/UpdateLog.md)
  
