@@ -22,7 +22,6 @@ The class that represents a single room in the target area. It can be literally 
   
   
   
-  
 ### Supplementary classes:
    
 ### [2DImageProvider](https://github.com/nesseratious/AR-Navigation/blob/master/API/2DImageProvider.md) 
@@ -33,13 +32,13 @@ The class is responsible for rendering the 2D minimap image.
 
 The supplementary class that stores lists of the possible user's initial positions.
     
-### [NavigationPathSpline](https://github.com/nesseratious/AR-Navigation/blob/master/API/NavigationPathSpline.md) 
-
-The class which is responsible for building a navigation path from the user's location to destination.
-    
 ### [Marker](https://github.com/nesseratious/AR-Navigation/blob/master/API/Marker.md) 
 
 The class which represents a single custom marker.
+
+### [NavigationPathSpline](https://github.com/nesseratious/AR-Navigation/blob/master/API/NavigationPathSpline.md) 
+
+The class which is responsible for building a navigation path from the user's location to destination.
 
 ### [Arrow](https://github.com/nesseratious/AR-Navigation/blob/master/API/Arrow.md) 
 

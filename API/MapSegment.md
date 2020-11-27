@@ -1,8 +1,8 @@
 ## MapSegment Class
 
-#### The class that is used to define segments of the target area. All FloatingIcon, Room, and Vertex classes that are located in this segment should be attached to it.
+#### The class that is used to define segments of the target area. All [FloatingIcon](https://github.com/nesseratious/AR-Navigation/blob/master/API/FloatingIcon.md) , [Room](https://github.com/nesseratious/AR-Navigation/blob/master/API/Room.md), and [Vertex](https://github.com/nesseratious/AR-Navigation/blob/master/API/Vetrex.md) classes that are located in this segment should be attached to it.
 
-Usage: Place it anywhere on the map and attach it to the ARWorldBase class. 
+Usage: Place it anywhere on the map and attach it to the [ARWorldBase](https://github.com/nesseratious/AR-Navigation/blob/master/API/ARWorldBase.md) class. 
 
 Public properties: 
 

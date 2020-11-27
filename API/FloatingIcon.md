@@ -2,7 +2,7 @@
 
 #### The class represents a floating icon that can be used to highlight points of interest.
 
-Usage: Place it anywhere on the map segment and attach it to the segment. 
+Usage: Place it anywhere on the [MapSegment](https://github.com/nesseratious/AR-Navigation/blob/master/API/MapSegment.md) and attach it to the segment. 
 
 Public properties: 
 
